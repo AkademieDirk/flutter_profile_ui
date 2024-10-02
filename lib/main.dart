@@ -1,6 +1,8 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:miniprofile/information_container.dart';
+import 'package:miniprofile/information_item.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -250,82 +252,6 @@ class _ProfileState extends State<Profile> {
               )))
         ],
       ),
-    );
-  }
-}
-
-class InformationContainer extends StatelessWidget {
-  final String subtitle;
-  final String title;
-
-  const InformationContainer({
-    super.key,
-    required this.title,
-    required this.subtitle,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        child: Column(
-      children: [
-        Text(
-          title,
-          style: TextStyle(color: Colors.grey[400], fontSize: 14.0),
-        ),
-        SizedBox(
-          height: 5.0,
-        ),
-        Text(
-          subtitle,
-          style: TextStyle(
-            fontSize: 15.0,
-          ),
-        )
-      ],
-    ));
-  }
-}
-
-class InformationItem extends StatelessWidget {
-  const InformationItem({
-    super.key,
-    required this.icon,
-    required this.title,
-    required this.details,
-  });
-  final Widget icon;
-  final String title;
-  final String details;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        icon,
-        SizedBox(
-          width: 20.0,
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              title,
-              style: TextStyle(
-                fontSize: 15.0,
-              ),
-            ),
-            Text(
-              details,
-              style: TextStyle(
-                fontSize: 12.0,
-                color: Colors.grey[400],
-              ),
-            )
-          ],
-        )
-      ],
     );
   }
 }
