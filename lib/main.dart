@@ -235,25 +235,8 @@ class _ProfileState extends State<Profile> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                        child: Column(
-                      children: [
-                        Text(
-                          'Battles',
-                          style: TextStyle(
-                              color: Colors.grey[400], fontSize: 14.0),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Text(
-                          "$counter",
-                          style: TextStyle(
-                            fontSize: 15.0,
-                          ),
-                        )
-                      ],
-                    )),
+                    InformationContainer(
+                        title: "Battles", subtitle: "$counter"),
                     InformationContainer(
                       title: "Age",
                       subtitle: "19 yrs",
